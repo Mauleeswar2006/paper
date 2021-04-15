@@ -17,9 +17,9 @@ function setup() {
 	world = engine.world;
 	
 	groundObject=new ground(width/2,670,width,20);
-	dustbinObj=new dustbin(1200,650);
 	paperObj = new Paper(200,450,70);
-
+	dustbinObj=new dustbin(1200,650);
+	
 	Engine.run(engine);
   
 }
@@ -31,12 +31,12 @@ function draw() {
  
 
   groundObject.display();
-  dustbinObj.display();
   paperObj.display();
+  dustbinObj.display();
 
 }
 function keyPressed(){
 	if (keyCode === UP_ARROW){
-		Matter.Body.applyForce(paperObj.body,paperObj.body.position,{x:130,y:-600});
+		Matter.Body.applyForce(paperObj.body,paperObj.body.position,{x:130,y:-150});
 	}
 }
